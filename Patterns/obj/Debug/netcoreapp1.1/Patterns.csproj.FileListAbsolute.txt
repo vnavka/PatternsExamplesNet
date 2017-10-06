@@ -1,0 +1,9 @@
+D:\Git\net\Patterns\Patterns\bin\Debug\netcoreapp1.1\Patterns.deps.json
+D:\Git\net\Patterns\Patterns\bin\Debug\netcoreapp1.1\Patterns.runtimeconfig.json
+D:\Git\net\Patterns\Patterns\bin\Debug\netcoreapp1.1\Patterns.runtimeconfig.dev.json
+D:\Git\net\Patterns\Patterns\bin\Debug\netcoreapp1.1\Patterns.dll
+D:\Git\net\Patterns\Patterns\bin\Debug\netcoreapp1.1\Patterns.pdb
+D:\Git\net\Patterns\Patterns\obj\Debug\netcoreapp1.1\Patterns.csprojResolveAssemblyReference.cache
+D:\Git\net\Patterns\Patterns\obj\Debug\netcoreapp1.1\Patterns.AssemblyInfo.cs
+D:\Git\net\Patterns\Patterns\obj\Debug\netcoreapp1.1\Patterns.dll
+D:\Git\net\Patterns\Patterns\obj\Debug\netcoreapp1.1\Patterns.pdb
