@@ -1,6 +1,5 @@
 ﻿using System;
 using Patterns.Patterns.Creational;
-using Patterns.Patterns.Creational.AbstractFactory;
 
 namespace Patterns
 {
@@ -10,7 +9,7 @@ namespace Patterns
         {
 			CreatTester CrItem = new CreatTester();
 			CrItem.RunReationalTest();
-
+			
 			Console.ReadLine();
 		}
     }

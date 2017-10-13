@@ -2,6 +2,7 @@
 using Patterns.Patterns.Creational.FactoryMethodPattern;
 using Patterns.Patterns.Creational.SingletonPattern;
 using Patterns.Patterns.Creational.PrototypePattern;
+using Patterns.Patterns.Creational.BuilderPattern;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,10 +12,11 @@ namespace Patterns.Patterns.Creational
 	class CreatTester {
 		public void RunReationalTest()
 		{
-			this.RunAbstractFactory();
-			this.RunFactoryMethod();
-			this.RunSingleton();
+			this.RunAbstractFactoryTest();
+			this.RunFactoryMethodTest();
+			this.RunSingletonTest();
 			this.RunPrototypeTest();
+			this.RunBuilderTest();
 		}
 
 		#region patternTest
@@ -28,26 +30,33 @@ namespace Patterns.Patterns.Creational
 			clone = prototype.Clone();
 			Console.WriteLine("itemB_id={0}", clone.Id);
 		}
-		private void RunFactoryMethod()
+		private void RunFactoryMethodTest()
 		{
 			Creator creator = new ConcreteCreatorA();
-			Product Item1 = creator.FactoryMethod();
+			FactoryMethodPattern.Product Item1 = creator.FactoryMethod();
 
 			creator = new ConcreteCreatorB();
-			Product Item2 = creator.FactoryMethod();
+			FactoryMethodPattern.Product Item2 = creator.FactoryMethod();
 		}
-		private void RunAbstractFactory()
+		private void RunAbstractFactoryTest()
 		{
 			Client cust = new Client(new ConcreteFactoryA());
 			cust.Run();
 			cust = new Client(new ConcreteFactoryB());
 			cust.Run();
 		}
-		private void RunSingleton()
+		private void RunSingletonTest()
 		{
 			var creator = new Singleton();
 			var product = creator.Instance;
 			Console.WriteLine(product.name);
+		}
+		private void RunBuilderTest()
+		{
+			Builder a_builder = new ConcreteBuilder();
+			Director a_derector = new Director(a_builder);
+			a_derector.Construct();
+			BuilderPattern.Product a_product = a_builder.GetResult();
 		}
 		#endregion
 	}
