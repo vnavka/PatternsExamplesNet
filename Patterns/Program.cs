@@ -1,5 +1,6 @@
 ﻿using System;
 using Patterns.Patterns.Creational;
+using Patterns.Patterns.Behavioral;
 
 namespace Patterns
 {
@@ -9,7 +10,10 @@ namespace Patterns
         {
 			CreatTester CrItem = new CreatTester();
 			CrItem.RunReationalTest();
-			
+
+			BehavTester BhItem = new BehavTester();
+			BhItem.RunReationalTest();
+
 			Console.ReadLine();
 		}
     }
