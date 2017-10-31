@@ -9,12 +9,12 @@ namespace Patterns.Patterns.Behavioral.ObserverPattern.ObserverImplementation
 	class ConcreteObserverB : IMyObserver
 	{
 		public string Name { get; set; }
-		IMyObservable stock;
+		IMyObservable source;
 		public ConcreteObserverB(string name, IMyObservable obs)
 		{
 			this.Name = name;
-			stock = obs;
-			stock.RegisterObserver(this);
+			source = obs;
+			source.RegisterObserver(this);
 		}
 		public void Update(object ob)
 		{
@@ -24,6 +24,11 @@ namespace Patterns.Patterns.Behavioral.ObserverPattern.ObserverImplementation
 				Console.WriteLine("{0} accept valueB -> {1}", this.Name, dto.valueB);
 			else
 				Console.WriteLine("{0} accept valueB -> {1}", this.Name, dto.valueB);
+		}
+		public void StopSubscrive()
+		{
+			source.RemoveObserver(this);
+			source = null;
 		}
 	}
 }

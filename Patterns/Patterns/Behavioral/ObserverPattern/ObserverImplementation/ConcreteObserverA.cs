@@ -23,7 +23,7 @@ namespace Patterns.Patterns.Behavioral.ObserverPattern.ObserverImplementation
 			else
 				Console.WriteLine("{0} deny   valueA -> {1}", this.Name, sInfo.valueA);
 		}
-		public void StopTrade()
+		public void StopSubscrive()
 		{
 			source.RemoveObserver(this);
 			source = null;

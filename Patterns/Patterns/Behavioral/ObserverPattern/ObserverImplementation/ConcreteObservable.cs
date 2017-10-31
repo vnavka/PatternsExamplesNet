@@ -35,8 +35,8 @@ namespace Patterns.Patterns.Behavioral.ObserverPattern.ObserverImplementation
 			Random rnd = new Random();
 			dto.valueA = rnd.Next(0, 60);
 			dto.valueB = rnd.Next(0, 80);
-			NotifyObservers();
 		}
+
 	}
 
 }
